@@ -7,7 +7,7 @@
 ## **Page Name:** edit-resume.html
 
 ## **Definition of Done:**
-1. Followed the Page Structure exactly.
+1. F̌ollowed the Page Structure exactly.
 2. Resume Image Border Radius in Round Shape.
 3. Resume Fields are Rendered with Data in JS.
 4. Edit Button in Top Right Corner as in the image (img/edit-resume-structure).
