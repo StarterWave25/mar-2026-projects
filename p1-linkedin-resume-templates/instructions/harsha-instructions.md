@@ -1,6 +1,8 @@
-# **Complete the Task by Tomorrow (06/03/2025) 5:00 PM.**
+# **Rule of the Month**: Output should exactly match the Definition of Done. So, map the Output with DOD.
 
-## **Rule of the Month:** Output should exactly match the Definition of Done.
+# **Complete the Task by Tomorrow (07/03/2025) 5:00 PM.**
+
+## **If not you have to Write the Responsive Code for the Entire Project.**
 
 ## **Definition of Done:**
 1. All Sections of LinkedIn Home Page (Header, Left, Right) must be fixed and except the Middle Post Section. And it should be Scrollable.

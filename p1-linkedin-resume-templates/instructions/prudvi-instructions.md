@@ -1,6 +1,9 @@
+# **Rule of the Month**: Output should exactly match the Definition of Done. So, map the Output with DOD.
+
 # **Complete the task by Tomorrow (07/03/2026) 7:00PM.**
 
-## **Rule of the Month**: Output should exactly match the Definition of Done.
+## **If not you have to Write the Responsive Code for the Entire Project.**
+
 
 ## **Page Name:** user-profile.html
 ## **Definition of Done:**
