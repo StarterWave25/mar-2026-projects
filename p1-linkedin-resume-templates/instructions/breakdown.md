@@ -1,8 +1,8 @@
 index:
 - header (Fixed)
-- right: small profile section (Fixed)
+- right: LinkedIn News (Fixed)
 - middle: upload post + posts (Scrollable)
-- left: LinkedIn News (Fixed)
+- left: small profile section (Fixed)
 
 user profile:
 - header (Fixed)
@@ -10,7 +10,7 @@ user profile:
 |-- profile banner
 |-- profile photo
 |-- profile details
-|-- buttons -> Open to, Add profile section, Enhance profile, Edit your Resume.
+|-- buttons -> Edit your Resume (blue background), Open to (blue border), Add profile section (gray)
 
 edit resume:
 - Your Resume Content:
