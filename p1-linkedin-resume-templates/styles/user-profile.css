@@ -4,21 +4,16 @@
   flex-direction: column;
   justify-self: center;
   margin-top: 30px;
-  border: none;
-}
-
-img {
-  width: 100px;
-  border: none !important;
 }
 
 .profile-section {
   width: 100%;
-  height: 70vh;
-  background-color: red;
+  height: 65vh;
   overflow: hidden;
-  border-radius: 15px;
-  border: none;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid var(--border-grey);
+  background-color: #f8fafd;
 }
 
 .banner-section {
@@ -29,4 +24,149 @@ img {
 .banner-section img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.img-notification-symbol-container {
+  width: 100%;
+  top: 15%;
+  height: 40%;
+  position: absolute;
+}
+
+.profile-image-container {
+  height: 100%;
+  width: 14%;
+  margin-left: 35px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+}
+
+.profile-image-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.notification-symbol {
+  width: 3%;
+  display: flex;
+  justify-self: flex-end;
+  position: absolute;
+  top: 90%;
+  right: 2%;
+}
+
+.personal-details {
+  margin-top: 6%;
+  margin-left: 30px;
+}
+
+.personal-details h2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-block: 5px;
+}
+
+.personal-details .heading {
+  font-size: 1.2rem;
+  margin-block: 5px;
+}
+
+.personal-details .contact-info {
+  color: gray;
+  margin-block: 5px
+}
+
+.personal-details .contact-info span:nth-child(2),
+.connections-count h3 {
+  color: var(--blue);
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.personal-details .contact-info span:nth-child(2):hover,
+.connections-count h3:hover {
+  border-bottom: 2.2px solid;
+}
+
+.connections-count h3 {
+  margin-left: 0;
+  font-size: 1rem;
+  width: fit-content;
+  border-bottom: 2px solid transparent;
+}
+
+.buttons-section {
+  width: 100%;
+  height: 35%;
+  display: flex;
+}
+
+.buttons-section button {
+  height: 22%;
+  background-color: var(--blue);
+  color: white;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  gap: 8px;
+  margin-left: 30px;
+  padding-inline: 1.4rem;
+}
+
+.buttons-section button:hover {
+  background-color: rgb(5, 80, 159);
+}
+
+.buttons-section button:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: #f5f7f9;
+  border: 2px solid black;
+  color: black
+}
+
+.buttons-section button img {
+  height: 70%;
+  width: fit-content;
+}
+
+.buttons-section button:nth-child(2):hover {
+  border: 2.5px solid;
+}
+
+.high-priority-college-company-section {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 30%;
+}
+
+.company,
+.college {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.company span, .college span {
+  border-bottom: 2.2px solid transparent;
+}
+
+.company span:hover, .college span:hover {
+  border-bottom: 2.2px solid var(--blue);
+  color: var(--blue);
+}
+
+.company img,
+.college img {
+  width: 40px;
 }
