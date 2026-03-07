@@ -7,6 +7,7 @@
     <title>LinkedIn</title>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
@@ -72,7 +73,7 @@
                 <span class="nav-link-span">Notifications</span>
             </li>
             <li class="nav-links">
-                <img src="img/praveen-sir-img.jpg" alt="user-icon" class="user-icon">
+                <img src="img/praveen-sir-img.jpg" alt="user-icon" class="nav-user-icon">
                 <span class="nav-link-span">Me
                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
                         class="bi bi-caret-down-fill" viewBox="0 0 16 16">
@@ -83,6 +84,39 @@
             </li>
         </ul>
     </header>
+    <main class="main-section">
+        <section class="user-profile-section">
+            <div class="user-profile">
+                <div class="profile-logo-banner-container">
+                    <a href="user-profile.html">
+                        <img class="profile-banner" src="img/profile-banner.png" alt="">
+                    </a>
+                    <a href="user-profile.html">
+                        <img class="profile-logo" src="img/praveen-sir-img.jpg" alt="">
+                    </a>
+                </div>
+                <a class="profile-details" href="user-profile.html">
+                    <h3 class="profile-user-name">Praveen Gubbala</h3>
+                    <p class="profile-user-role">Fullstack Consultant Trainer</p>
+                    <p class="profile-user-place">Hyderabad, Telangana, India</p>
+                </a>
+            </div>
+            <div class="user-analytics-section">
+                <div class="user-analytics">
+                    <h4 class="analytics-heading">Profile viewers</h4>
+                    <span class="analytics-values">553</span>
+                </div>
+                <div class="user-analytics">
+                    <h4 class="analytics-heading">Post impressions</h4>
+                    <span class="analytics-values">1012</span>
+                </div>
+            </div>
+        </section>
+        <section class="posts-section">
+            <div class="upload-posts-container"></div>
+            <div class="posts-section"></div>
+        </section>
+    </main>
 </body>
 
 </html>

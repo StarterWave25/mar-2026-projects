@@ -1,9 +1,10 @@
 :root {
     --white: white;
     --grey: rgb(245, 245, 245);
-    --dark-grey: rgb(190, 190, 190);
+    --border-grey: rgb(220, 220, 220);
     --blue: rgb(10, 102, 194);
     --black: black;
+    --border-radius: 8px;
 }
 
 * {
