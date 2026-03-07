@@ -1,82 +1,85 @@
 const posts = [
-    {
-        name: "Deepika Padukone",
-        tagline: "Actor | Occasional Philosopher | Accidental LinkedIn Thought Leader",
-        time: "5m",
-        post: "Just finished a 14-hour shoot and someone told me consistency is the key to success. Interesting. I thought it was lighting, a good script, and 37 retakes. But sure… consistency works too.",
-        likes: 48213,
-        comments: 3921
-    },
-    {
-        name: "Prabhas",
-        tagline: "Actor | Pan-India Introvert | Biryani Network Builder",
-        time: "3h",
-        post: "People ask how to build strong teams. Simple: Feed them biryani before meetings. Nobody leaves the company if the food is good. HR departments should take notes.",
-        likes: 55102,
-        comments: 4210
-    },
-    {
-        name: "Mahesh Babu",
-        tagline: "Actor | Coffee Enthusiast | Professional Slow Motion Walker",
-        time: "19h",
-        post: "Leadership lesson from today’s shoot: When you walk slowly toward the camera, everyone behind you automatically follows. That’s called influence. Try it in meetings.",
-        likes: 38290,
-        comments: 2450
-    },
-    {
-        name: "Allu Arjun",
-        tagline: "Actor | Style Architect | Slide Deck Dancer",
-        time: "19h",
-        post: "Someone said ‘be yourself’. So I added a dance step before every meeting entrance today. Productivity increased 0%, but the vibe improved 200%. #Leadership",
-        likes: 46322,
-        comments: 3178
-    },
-    {
-        name: "Ram Charan",
-        tagline: "Actor | Horse Rider | Corporate Motivation Specialist",
-        time: "9h",
-        post: "A reminder to everyone: if your Monday meeting feels intense, imagine doing it while riding a horse and carrying a sword. Perspective solves half your problems.",
-        likes: 39770,
-        comments: 2812
-    },
-    {
-        name: "NTR Jr",
-        tagline: "Actor | Dialogue Delivery Consultant | Team Energy Generator",
-        time: "4h",
-        post: "Tried giving a dramatic movie dialogue before our team discussion today. Everyone suddenly started paying attention. Apparently volume is an underrated leadership skill.",
-        likes: 41205,
-        comments: 2991
-    },
-    {
-        name: "Rashmika Mandanna",
-        tagline: "Actor | Smile Strategist | Accidental Meme Creator",
-        time: "1m",
-        post: "Networking tip: Smile in every meeting. Even if you have no idea what the presentation is about. Works in films. Works in corporate too.",
-        likes: 35890,
-        comments: 2144
-    },
-    {
-        name: "Vijay Deverakonda",
-        tagline: "Actor | Startup Energy | Professional Attitude Carrier",
-        time: "5h",
-        post: "Someone asked how I stay confident. Simple formula: Wear sunglasses indoors and speak like you already own the company. Works surprisingly well.",
-        likes: 44112,
-        comments: 3387
-    },
-    {
-        name: "Samantha Ruth Prabhu",
-        tagline: "Actor | Fitness Overachiever | Productivity Optimizer",
-        time: "9h",
-        post: "Woke up at 5AM, did yoga, gym, meditation, and 3 meetings. Then remembered most people just wake up and open emails. Interesting lifestyle choice.",
-        likes: 37260,
-        comments: 2566
-    }
+  {
+    name: "Deepika Padukone",
+    tagline:
+      "Actor | Occasional Philosopher | Accidental LinkedIn Thought Leader",
+    time: "5m",
+    post: "Just finished a 14-hour shoot and someone told me consistency is the key to success. Interesting. I thought it was lighting, a good script, and 37 retakes. But sure… consistency works too.",
+    likes: 48213,
+    comments: 3921,
+  },
+  {
+    name: "Prabhas",
+    tagline: "Actor | Pan-India Introvert | Biryani Network Builder",
+    time: "3h",
+    post: "People ask how to build strong teams. Simple: Feed them biryani before meetings. Nobody leaves the company if the food is good. HR departments should take notes.",
+    likes: 55102,
+    comments: 4210,
+  },
+  {
+    name: "Mahesh Babu",
+    tagline: "Actor | Movie Reviewer | Professional Slow Motion Walker",
+    time: "19h",
+    post: "Leadership lesson from today’s shoot: When you walk slowly toward the camera, everyone behind you automatically follows. That’s called influence. Try it in meetings.",
+    likes: 38290,
+    comments: 2450,
+  },
+  {
+    name: "Allu Arjun",
+    tagline: "Actor | Style Architect | Slide Deck Dancer",
+    time: "19h",
+    post: "Someone said ‘be yourself’. So I added a dance step before every meeting entrance today. Productivity increased 0%, but the vibe improved 200%. #Leadership",
+    likes: 46322,
+    comments: 3178,
+  },
+  {
+    name: "Ram Charan",
+    tagline: "Actor | Horse Rider | Corporate Motivation Specialist",
+    time: "9h",
+    post: "A reminder to everyone: if your Monday meeting feels intense, imagine doing it while riding a horse and carrying a sword. Perspective solves half your problems.",
+    likes: 39770,
+    comments: 2812,
+  },
+  {
+    name: "NTR Jr",
+    tagline: "Actor | Dialogue Delivery Consultant | Team Energy Generator",
+    time: "4h",
+    post: "Tried giving a dramatic movie dialogue before our team discussion today. Everyone suddenly started paying attention. Apparently volume is an underrated leadership skill.",
+    likes: 41205,
+    comments: 2991,
+  },
+  {
+    name: "Rashmika Mandanna",
+    tagline: "Actor | Smile Strategist | Accidental Meme Creator",
+    time: "1m",
+    post: "Networking tip: Smile in every meeting. Even if you have no idea what the presentation is about. Works in films. Works in corporate too.",
+    likes: 35890,
+    comments: 2144,
+  },
+  {
+    name: "Vijay Deverakonda",
+    tagline: "Actor | Startup Energy | Professional Attitude Carrier",
+    time: "5h",
+    post: "Someone asked how I stay confident. Simple formula: Wear sunglasses indoors and speak like you already own the company. Works surprisingly well.",
+    likes: 44112,
+    comments: 3387,
+  },
+  {
+    name: "Samantha Ruth Prabhu",
+    tagline: "Actor | Fitness Overachiever | Productivity Optimizer",
+    time: "9h",
+    post: "Woke up at 5AM, did yoga, gym, meditation, and 3 meetings. Then remembered most people just wake up and open emails. Interesting lifestyle choice.",
+    likes: 37260,
+    comments: 2566,
+  },
 ];
 
-const postsFeed = document.querySelector('.posts-feed');
+const postsFeed = document.querySelector(".posts-feed");
 
 const postsHTML = posts.reduce((postsHTML, post) => {
-    return postsHTML + `
+  return (
+    postsHTML +
+    `
         <div class="post-item">
             <div class="post-header">
                 <div class="author-img">
@@ -116,7 +119,8 @@ const postsHTML = posts.reduce((postsHTML, post) => {
                 </div>
             </div>
         </div>
-    `;
-}, '');
+    `
+  );
+}, "");
 
 postsFeed.innerHTML = postsHTML;
