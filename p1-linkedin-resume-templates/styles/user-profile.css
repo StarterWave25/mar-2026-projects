@@ -121,14 +121,14 @@
   background-color: rgb(5, 80, 159);
 }
 
-.buttons-section button:nth-child(2) {
+.buttons-section button:nth-child(2), .buttons-section button:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
   background-color: #f5f7f9;
-  border: 2px solid black;
-  color: black
+  border: 2px solid var(--blue);
+  color: var(--blue)
 }
 
 .buttons-section button img {
@@ -136,8 +136,9 @@
   width: fit-content;
 }
 
-.buttons-section button:nth-child(2):hover {
+.buttons-section button:nth-child(2):hover, .buttons-section button:nth-child(3):hover {
   border: 2.5px solid;
+  background-color: rgba(103, 168, 237, 0.224);
 }
 
 .high-priority-college-company-section {
