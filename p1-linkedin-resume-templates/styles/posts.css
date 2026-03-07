@@ -1,0 +1,117 @@
+.posts-feed {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.post-item {
+    border-radius: 8px;
+    border: 1px solid var(--border-grey);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-item>* {
+    padding: 0.5rem 1rem;
+}
+
+.post-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.author-img {
+    width: 48px;
+    height: 48px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.post-author-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.author-tagline,
+.post-time {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    gap: 0.5rem;
+}
+
+.post-content {
+    flex: 2;
+    font-size: 0.9rem;
+}
+
+.post-engagements {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.engagements {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.likes,
+.comments {
+    color: gray;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.likes:hover,
+.comments:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.engagement-btns-card {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.engagement-btns {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    color: rgb(71, 71, 71);
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.engagement-btns:hover {
+    background-color: var(--grey);
+}

@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 8rem;
+    z-index: 1;
 }
 
 .logo-search-container {
@@ -35,7 +36,7 @@
     height: 100%;
     padding: 0.6rem 4rem 0.6rem 2rem;
     border-radius: 64px;
-    border: 1px solid var(--dark-grey);
+    border: 1px solid var(--border-grey);
 }
 
 .nav-link-btns {

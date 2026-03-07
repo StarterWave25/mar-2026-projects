@@ -1,8 +1,8 @@
 .main-section {
     padding: 2rem 7rem;
     display: grid;
-    grid-template-columns: 1fr 3fr 1.5fr;
-    gap: 1.5rem;
+    grid-template-columns: 240px 560px;
+    gap: 2rem;
 }
 
 .user-profile-section {
@@ -10,11 +10,14 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 0.5rem;
+    max-height: 300px;
+    position: sticky;
+    top: 5.5rem;
 }
 
 .user-profile {
     border-radius: 8px;
-    border: 1px solid var(--dark-grey);
+    border: 1px solid var(--border-grey);
     background-color: var(--white);
     overflow: hidden;
 }
@@ -67,14 +70,14 @@
 }
 
 .user-analytics-section {
-    border: 1px solid var(--dark-grey);
+    border: 1px solid var(--border-grey);
     background-color: var(--white);
     border-radius: 8px;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.75rem;
 }
 
 .user-analytics {
@@ -97,4 +100,59 @@
     color: var(--blue);
     font-size: 0.75rem;
     font-weight: 600;
+}
+
+.posts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.upload-posts-container {
+    border-radius: 8px;
+    background-color: var(--white);
+    border: 1px solid var(--border-grey);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-input-container {
+    display: flex;
+    flex: 1;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+}
+
+.post-input-user-logo {
+    width: 48px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.post-input {
+    padding: 0rem 17rem 0rem 1rem;
+    border-radius: 32px;
+    font-weight: 500;
+    border: 1px solid var(--border-grey);
+}
+
+.upload-post-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.post-option {
+    padding: 0.75rem 2rem;
+    color: rgb(71, 71, 71);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-option:hover {
+    background-color: var(--grey);
 }
