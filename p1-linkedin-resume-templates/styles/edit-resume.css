@@ -1,0 +1,117 @@
+.resume-content-container {
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+.resume-content-container h2 {
+  text-align: center;
+}
+
+.resume-contents {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  /* margin-top: 40px; */
+  margin: 40px auto;
+  position: relative;
+}
+
+.resume-fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 3;
+}
+
+.resume-field-span {
+  font-weight: bold;
+}
+
+.resume-field p {
+  margin-top: 5px;
+}
+
+/* .resume-contents .edit-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0.5em 1em;
+  background-color: rgb(23, 128, 241);
+  border: 1px solid rgb(0, 115, 255);
+  border-radius: 10px;
+  color: white;
+  transition: padding 0.15s;
+  cursor: pointer;
+} */
+.edit-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #0a66c2; /* LinkedIn blue */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--grey);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.edit-btn:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.resume-contents .edit-button:hover {
+  padding: 0.7em 1.2em;
+}
+
+.resume-img-container {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+}
+
+.resume-img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px var(--grey);
+}
+
+.resume-fields-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-templates-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resume-templates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.resume-template {
+  width: 300px;
+  height: 400px;
+  background-color: gray;
+  transition: transform 0.15s;
+}
+
+.resume-template:hover {
+  transform: scale(1.03);
+}

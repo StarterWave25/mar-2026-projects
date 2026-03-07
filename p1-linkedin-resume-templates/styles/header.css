@@ -6,29 +6,29 @@
     display: flex;
     justify-content: space-between;
     padding: 0 8rem;
-    z-index: 1;
 }
 
 .logo-search-container {
-    display: flex;
-    padding: 0.2rem 0;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  padding: 0.2rem 0;
+  align-items: center;
+  gap: 1rem;
 }
 
 .mercado-match {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .search-container {
-    position: relative;
+  position: relative;
 }
 
 .bi.bi-search {
-    position: absolute;
-    top: 50%;
-    left: 7%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  
+  transform: translate(-50%, -50%);
 }
 
 .search-input {
@@ -36,58 +36,58 @@
     height: 100%;
     padding: 0.6rem 4rem 0.6rem 2rem;
     border-radius: 64px;
-    border: 1px solid var(--border-grey);
+    border: 1px solid var(--dark-grey);
 }
 
 .nav-link-btns {
-    display: flex;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
 .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.6;
-    gap: 0.1rem;
-    height: 100%;
-    padding: 0 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  gap: 0.1rem;
+  height: 100%;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-links:first-child {
-    opacity: 1;
-    position: relative;
+  opacity: 1;
+  position: relative;
 }
 
 .nav-links:first-child::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    border-radius: var(--border-radius);
-    background-color: var(--black);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: var(--border-radius);
+  background-color: var(--black);
 }
 
 .nav-links:last-child {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-user-icon {
-    width: 24px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+  width: 24px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
 .nav-link-span {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
