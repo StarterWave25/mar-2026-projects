@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn</title>
+    <title>Feed | LinkedIn</title>
+    <link rel="icon" type="image/svg+xml" href="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8"
+        id="favicon-svg">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/posts.css">
 </head>
 
 <body>
@@ -113,10 +116,28 @@
             </div>
         </section>
         <section class="posts-section">
-            <div class="upload-posts-container"></div>
-            <div class="posts-section"></div>
+            <div class="upload-posts-container">
+                <div class="post-input-container">
+                    <img src="img/praveen-sir-img.jpg" alt="" class="post-input-user-logo">
+                    <input type="text" class="post-input" placeholder="Start a post">
+                </div>
+                <div class="upload-post-options">
+                    <div class="post-option">
+                        <span>Video</span>
+                    </div>
+                    <div class="post-option">
+                        <span>Photo</span>
+                    </div>
+                    <div class="post-option">
+                        <span>Write article</span>
+                    </div>
+                </div>
+            </div>
+            <div class="posts-feed">
+            </div>
         </section>
     </main>
+    <script src="scripts/posts.js"></script>
 </body>
 
 </html>

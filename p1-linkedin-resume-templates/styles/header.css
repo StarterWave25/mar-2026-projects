@@ -1,12 +1,11 @@
 .linkedin-header {
-  position: sticky;
-  top: 0;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--grey);
-  display: flex;
-  justify-content: space-between;
-  padding: 0 8rem;
-  z-index: 1000;
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--grey);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8rem;
 }
 
 .logo-search-container {
@@ -33,12 +32,11 @@
 }
 
 .search-input {
-  width: 100%;
-  height: 100%;
-  padding: 0.6rem 4rem 0.6rem 2rem;
-  border-radius: 64px;
-  border: 1px solid var(--dark-grey);
-  
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 4rem 0.6rem 2rem;
+    border-radius: 64px;
+    border: 1px solid var(--dark-grey);
 }
 
 .nav-link-btns {
