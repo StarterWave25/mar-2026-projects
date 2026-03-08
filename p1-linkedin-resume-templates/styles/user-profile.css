@@ -6,7 +6,8 @@
   margin-top: 30px;
 }
 
-.profile-section, .about-section {
+.profile-section,
+.about-section {
   width: 100%;
   height: 65vh;
   overflow: hidden;
@@ -121,14 +122,15 @@
   background-color: rgb(5, 80, 159);
 }
 
-.buttons-section button:nth-child(2), .buttons-section button:nth-child(3) {
+.buttons-section button:nth-child(2),
+.buttons-section button:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
   background-color: #f5f7f9;
   border: 2px solid var(--blue);
-  color: var(--blue)
+  color: var(--blue);
 }
 
 .buttons-section button img {
@@ -136,7 +138,8 @@
   width: fit-content;
 }
 
-.buttons-section button:nth-child(2):hover, .buttons-section button:nth-child(3):hover {
+.buttons-section button:nth-child(2):hover,
+.buttons-section button:nth-child(3):hover {
   border: 2.5px solid;
   background-color: rgba(103, 168, 237, 0.224);
 }
@@ -158,11 +161,13 @@
   cursor: pointer;
 }
 
-.company span, .college span {
+.company span,
+.college span {
   border-bottom: 2.2px solid transparent;
 }
 
-.company span:hover, .college span:hover {
+.company span:hover,
+.college span:hover {
   border-bottom: 2.2px solid var(--blue);
   color: var(--blue);
 }
