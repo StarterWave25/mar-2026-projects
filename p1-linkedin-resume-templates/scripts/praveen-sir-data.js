@@ -18,6 +18,8 @@ const userData = {
     },
   ],
   contact: { phone: 7875381293, email: "praveengclasses@gmail.com" },
+  skills: ['Leadership', 'React JS', 'Angular JS', 'JavaScript', 'MongoDB', 'Node JS', 'SQL'],
+  languages: ['Telugu', 'English', 'Hindi']
 };
 
 let fullName = document.querySelector(".fullname-field-para");

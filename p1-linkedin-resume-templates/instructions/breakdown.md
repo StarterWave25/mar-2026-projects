@@ -27,3 +27,9 @@ edit resume:
 |-- Resume Templates Grid
     |__ Clicking on one of them should open in a popup with user data
     |__ Button (Download as PDF)
+
+
+
+Mistakes:
+1. Write what are the languages used for the task top of the instruction doc.
+2. 
