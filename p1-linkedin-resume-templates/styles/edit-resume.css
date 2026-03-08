@@ -68,6 +68,12 @@ main {
     width: 40vw;
     border-radius: 8px;
     border: 1px solid var(--border-grey);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.resume-section>* {
+    height: 100%;
 }
 
 .resume-templates-section {
@@ -91,25 +97,10 @@ main {
     border-radius: 8px;
     border: 1px solid var(--border-grey);
     cursor: pointer;
-    font-size: 4px;
+    font-size: 3px;
     overflow: hidden;
 }
 
-
-/* .resume-card {
-    width: 320px;
-    height: 480px;
-    background: white;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    position: relative;
-    font-size: 10px;
-    transition: transform 0.3s ease;
-} */
-/* 
-.resume-card:hover {
-    transform: translateY(-5px);
-} */
 
 /* REUSABLE TEMPLATE STYLES */
 
@@ -123,7 +114,7 @@ main {
 .tpl-modern .header {
     background: #1a365d;
     color: white;
-    padding: 16px;
+    padding: 2em;
 }
 
 .tpl-modern .content {
@@ -132,14 +123,14 @@ main {
 }
 
 .tpl-modern h2 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     margin-bottom: 2px;
 }
 
 .tpl-modern .tagline {
     opacity: 0.9;
     font-weight: 300;
-    margin-bottom: 8px;
+    margin-bottom: 1em;
 }
 
 .tpl-modern section {
@@ -149,10 +140,10 @@ main {
 .tpl-modern .section-title {
     color: #1a365d;
     border-bottom: 1px solid #eee;
-    margin-bottom: 4px;
+    margin-bottom: 1em;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 1.1em;
 }
 
 /* TPL 2: Creative Minimalist */
@@ -181,7 +172,7 @@ main {
     padding: 2px 6px;
     border-radius: 4px;
     margin: 2px;
-    font-size: 0.6rem;
+    font-size: 0.8em;
 }
 
 /* TPL 3: Tech Professional */
@@ -192,6 +183,7 @@ main {
 .tpl-tech {
     color: #cbd5e1;
     padding: 20px;
+    background: #0f172a;
 }
 
 .tpl-tech h2 {
@@ -248,8 +240,8 @@ main {
     align-items: center;
     justify-content: space-between;
     font-family: 'Roboto';
-    gap: 0.5rem;
-    font-size: 0.6rem;
+    gap: 0.5em;
+    font-size: 0.8em;
     margin: 8px 0;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
@@ -257,7 +249,7 @@ main {
 
 /* Typography Helpers */
 .summary-text {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     line-height: 1.4;
     color: #4a5568;
 }
@@ -303,21 +295,21 @@ main {
     font-family: 'Playfair Display', serif;
     color: #744210;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.6em;
 }
 
 .tpl-royal .gold-divider {
     height: 1px;
     background: linear-gradient(to right, transparent, #b7791f, transparent);
-    margin: 8px 0;
+    margin: 1em 0;
 }
 
 /* TPL 8: The Bordered Professional */
 .tpl-bordered {
-    margin: 12px;
+    margin: 2em;
     border: 2px solid #2d3748;
     height: calc(100% - 24px);
-    padding: 16px;
+    padding: 2em;
     position: relative;
 }
 
@@ -327,7 +319,7 @@ main {
     right: 10px;
     border: 1px solid #2d3748;
     padding: 4px;
-    font-size: 0.5rem;
+    font-size: 1em;
     transform: rotate(5deg);
     font-weight: bold;
 }
@@ -367,7 +359,7 @@ main {
 
 .tpl-noir .meta {
     color: #f56565;
-    font-size: 0.6rem;
+    font-size: 1.2em;
     margin-bottom: 12px;
     font-weight: bold;
 }
