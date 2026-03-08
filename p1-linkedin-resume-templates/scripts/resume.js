@@ -12,7 +12,7 @@ renderResume(resumeId);
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  resumeContainer.addEventListener('click', () => {
+  resumeContainer.addEventListener('dblclick', () => {
     if (!document.fullscreenElement) {
       resumeContainer.requestFullscreen();
     } else {
