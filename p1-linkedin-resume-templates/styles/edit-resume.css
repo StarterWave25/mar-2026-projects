@@ -62,7 +62,7 @@ main {
 }
 
 .resume-section {
-    margin: 1rem;
+    margin-block: 1rem;
     background-color: white;
     aspect-ratio: 32/40;
     width: 40vw;
