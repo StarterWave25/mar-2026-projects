@@ -32,5 +32,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!card) return;
     renderResume(card.id);
   });
-
 });
