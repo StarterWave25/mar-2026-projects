@@ -31,5 +31,7 @@ edit resume:
 
 
 Mistakes:
-1. Write what are the languages used for the task top of the instruction doc.
-2. 
+This week mistakes I did:
+1. I missed writing Programming Languages used for a task in an Instruction doc.
+2. I didn't asked the layout ideas before writing the instructions. Nearly 6 hours wasted here because of edit-resume page.
+3. I didn't observed the minor details clearly means no clear breakdown of everything.
