@@ -7,4 +7,4 @@
 - No Navigation needed - Home, About, Posts, Jobs, Life, People.
 
 ## **What our People Say?**:
-- Buttons: Add your Journey, Practice Employee Concepts
+- Buttons: Add your Journey, Practice Recommened Concepts

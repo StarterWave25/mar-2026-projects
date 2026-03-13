@@ -14,10 +14,10 @@
 ## **Definition of Done:**
 1. Header should be included from index.html and include styles/global.css & styles/header.css.
 2. Only Company Section should be designed, no need of right section keep it as placeholder with white Background.
-3. Buttons in Company Section: **What our People Say?** (Blue Background), Follow (White Bordered). (Enough)
+3. Buttons in Company Section: **Life inside the Company** (Blue Background), Follow (White Bordered). (Enough)
 4. No Navigation needed - Home, About, Posts, Jobs, Life, People But design that section without functionality.
 5. Design only upto Overview Section, No need of designing other next sections.
-6. Link the Button **What our People Say?** to what-our-people-say.html.
+6. Link the Button **Life inside the Company** to life-inside-the-company.html.
 
 ## **Do's & Don'ts:**
 1. Don't Forget to map the Output with DOD after Completion of Task.
