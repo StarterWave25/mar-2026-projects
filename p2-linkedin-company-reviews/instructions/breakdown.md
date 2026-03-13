@@ -29,5 +29,12 @@
     modelQuestions
 }
 
-## **What our People Say?**:
-- Buttons: Add your Journey, Practice Recommened Concepts
+## **Life inside the Company**:
+- Header
+- Heading(h2) - Life inside the Company, Buttons: Add your Journey, Practice Recommended Concepts
+- Review Cards - Experience Period should be shown like a Steps in Journey
+- Add your Journey - on Clicking it, a form will open as popup.
+
+## **Profile Section**:
+- Add Experience Section and one Company
+- Clicking on the Company should open "company-page.html"
