@@ -1,245 +1,247 @@
 body {
-  background-color: var(--linkedIn-background3);
+    background-color: var(--linkedIn-background3);
 }
 
 .main-container {
-  padding: clamp(1rem, 2vw, 3rem) clamp(1rem, 5vw, 4rem);
-  display: flex;
-  width: 100%;
-  min-height: 120vh;
-  gap: 2em;
+    padding: clamp(1rem, 2vw, 3rem) clamp(1rem, 5vw, 4rem);
+    display: flex;
+    width: 100%;
+    min-height: 120vh;
+    gap: 2em;
 }
 
 .company-details {
-  flex: 3 1 0;
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 3 1 0;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .company-profile {
-  height: 65%;
-  background-color: var(--linkedIn-background);
-  border: 1px solid var(--border-grey);
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
+    height: 65%;
+    background-color: var(--linkedIn-background);
+    border: 1px solid var(--border-grey);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
 }
 
 .banner-section {
-  flex: 1 1 0;
-  object-fit: cover;
-  position: relative;
+    flex: 1 1 0;
+    object-fit: cover;
+    position: relative;
 }
 
 .banner-section img {
-  width: 100%;
+    width: 100%;
 }
 
 .profile-section {
-  position: absolute;
-  background-color: transparent;
-  width: 100%;
-  bottom: -50%;
-  height: 100%;
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    bottom: -50%;
+    height: 100%;
 }
 
 .profile-section .image-container {
-  height: 100%;
-  padding-left: 2em;
+    height: 100%;
+    padding-left: 2em;
 }
 
 .profile-section img {
-  height: 90%;
-  width: fit-content;
-  border: 5px solid white;
+    height: 90%;
+    width: fit-content;
+    border: 5px solid white;
 }
 
 .notification-symbol {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 .notification-symbol svg {
-  opacity: .75;
+    opacity: .75;
 }
 
 .details-section {
-  padding: clamp(1rem, .9vw, 3rem) clamp(1rem, 1.5vw, 4rem);
-  flex: 2 1 0;
-  margin-top: 10%;
+    padding: clamp(1rem, .9vw, 3rem) clamp(1rem, 1.5vw, 4rem);
+    flex: 2 1 0;
+    margin-top: 10%;
 }
 
 .details-section h3 {
-  font-size: clamp(1rem, 1.7vw, 1.8rem);
-  font-weight: 500;
-  display: flex;
-  letter-spacing: .7px;
-  margin: 5px 0;
+    font-size: clamp(1rem, 1.7vw, 1.8rem);
+    font-weight: 500;
+    display: flex;
+    letter-spacing: .7px;
+    margin: 5px 0;
 }
 
 .details-section h3 .badge {
-  height: 100%;
-  width: 30px;
-  margin-left: 5px;
-  margin-top: 2px;
+    height: 100%;
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 2px;
 }
 
 .details-section h3 img {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .details-section .description {
-  margin: 5px 0;
-  font-size: clamp(.86rem, 1.3vw, 1.2rem);
+    margin: 5px 0;
+    font-size: clamp(.86rem, 1.3vw, 1.2rem);
 }
 
 .details-section .info {
-  margin: 5px 0;
-  font-size: clamp(.7rem, 1.2vw, 1.1rem);
-  color: gray;
+    margin: 5px 0;
+    font-size: clamp(.7rem, 1.2vw, 1.1rem);
+    color: gray;
 }
 
 .buttons-section {
-  margin-top: 2em;
-  gap: 1.5em;
-  display: flex;
+    margin-top: 2em;
+    gap: 1.5em;
+    display: flex;
 }
 
-.life-button, .buttons {
-  background-color: white;
-  color: var(--blue);
-  border: 1.5px solid var(--blue);
+.life-button,
+.buttons {
+    background-color: white;
+    color: var(--blue);
+    border: 1.5px solid var(--blue);
 }
 
 .life-button {
-  background-color: var(--blue);
-  color: white;
+    background-color: var(--blue);
+    color: white;
 }
 
 .ghost-button:hover {
-  background-color: #7bb3eb55;
-  color: #064e96;
-  border: 1.7px solid #064e96;
+    background-color: #7bb3eb55;
+    color: #064e96;
+    border: 1.7px solid #064e96;
 }
 
 .life-button:hover {
-  background-color: #08519a;
+    background-color: #08519a;
 }
 
 .navigation-section {
-  flex: .7 1 0;
-  border-top: 1.3px solid rgba(128, 128, 128, 0.283);
+    flex: .7 1 0;
+    border-top: 1.3px solid rgba(128, 128, 128, 0.283);
 }
 
 .navigation-section ul {
-  width: 60%;
-  display: flex;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
+    width: 60%;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navigation-section ul li {
-  list-style: none;
-  font-size: clamp(.9rem, 1.3vw, 1.2rem);
-  font-weight: 500;
-  color: rgb(109, 107, 107);
-  height: 100%;
-  display: flex;
-  align-items: center;
+    list-style: none;
+    font-size: clamp(.9rem, 1.3vw, 1.2rem);
+    font-weight: 500;
+    color: rgb(109, 107, 107);
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .navigation-section ul li:nth-child(1) {
-  color: #017547;
-  font-weight: 700;
-  position: relative;
+    color: #017547;
+    font-weight: 700;
+    position: relative;
 }
 
 .navigation-section ul li:nth-child(1)::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 10%;
-  bottom: 0;
-  left: 0;
-  background-color: #017547;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    left: 0;
+    background-color: #017547;
 }
 
 .overview-container {
-  height: 32%;
-  background-color: var(--linkedIn-background);
-  border: 1px solid var(--border-grey);
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: clamp(1rem, 1vw, 3rem) clamp(1rem, 3vw, 4rem);
+    height: 32%;
+    background-color: var(--linkedIn-background);
+    border: 1px solid var(--border-grey);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: clamp(1rem, 1vw, 3rem) clamp(1rem, 3vw, 4rem);
 }
 
 .overview-container h2 {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .overview-container .description {
-  font-size: clamp(.9rem, 2vw, 1.25rem);
-  overflow: hidden;
-  height: 55%;
+    font-size: clamp(.9rem, 2vw, 1.25rem);
+    overflow: hidden;
+    height: 55%;
 }
 
 .overview-container .description span {
-  font-weight: 500;
-  color: gray;
-  cursor: pointer;
+    font-weight: 500;
+    color: gray;
+    cursor: pointer;
 }
 
 .overview-container .all-details {
-  border-top: 2px solid rgba(186, 183, 183, 0.267);
-  padding-top: 10px;
-  color: gray;
-  font-weight: 500;
-  text-align: center;
-  font-size: clamp(.9rem, 2vw, 1.25rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: all 1s;
+    border-top: 2px solid rgba(186, 183, 183, 0.267);
+    padding-top: 10px;
+    color: gray;
+    font-weight: 500;
+    text-align: center;
+    font-size: clamp(.9rem, 2vw, 1.25rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 1s;
 }
 
 .overview-container img {
-  width: 15px;
-  margin-top: 5px;
-  opacity: .5;
+    width: 15px;
+    margin-top: 5px;
+    opacity: .5;
 }
 
-.overview-container .all-details:hover, .overview-container .all-details:hover>img{
-  color: black;
-  opacity: 1;
+.overview-container .all-details:hover,
+.overview-container .all-details:hover>img {
+    color: black;
+    opacity: 1;
 }
 
 .promotions-details {
-  flex: 1 1 0;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 1 1 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .promos-container {
-  background-color: var(--linkedIn-background2);
-  width: 100%;
-  height: 32%;
-  border: 1px solid var(--border-grey);
-  border-radius: var(--border-radius);
+    background-color: var(--linkedIn-background2);
+    width: 100%;
+    height: 32%;
+    border: 1px solid var(--border-grey);
+    border-radius: var(--border-radius);
 }
 
-@media (width <= 700px) {
-  .main-container {
-    flex-direction: column;
-  }
+@media (width <=700px) {
+    .main-container {
+        flex-direction: column;
+    }
 }

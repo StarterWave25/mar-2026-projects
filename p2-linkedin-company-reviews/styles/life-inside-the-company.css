@@ -1,0 +1,25 @@
+.main-container {
+    padding: 2rem 4rem;
+}
+
+.heading-btns-container {
+    background-color: var(--white);
+    border: 1px solid var(--border-grey);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.life-inside-heading {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.life-inside-btns {
+    display: flex;
+    gap: 1rem;
+}
