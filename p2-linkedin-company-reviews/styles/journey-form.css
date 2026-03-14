@@ -1,0 +1,71 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.journey-form {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem 1.5rem;
+  gap: 0.5rem;
+  width: clamp(30rem, 45vw, 50rem);
+}
+
+.journey-form > * {
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-item label {
+  color: var(--blue);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.input-field {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray);
+  outline: 3px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  border: 1px solid var(--blue);
+  outline: 3px solid rgb(0, 83, 93, 0.2);
+}
+
+.input-span {
+  color: var(--error-red);
+  font-size: 0.8rem;
+}
+
+.form-button {
+  margin-top: 1rem;
+}
+
+.submit-button {
+  padding: 0.35rem 1rem;
+  border-radius: 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  border: 1px solid var(--border-grey);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-button:active,
+.submit-button:hover {
+  background-color: rgb(5, 80, 159);
+  color: white;
+  border: 2px solid var(--blue);
+}
