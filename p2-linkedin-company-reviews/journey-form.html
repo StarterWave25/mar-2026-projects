@@ -1,103 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Journey Form</title>
-    <link
-      rel="stylesheet"
-      href="styles/journey-form.css"
-    />
-    <link
-      rel="stylesheet"
-      href="styles/global.css"
-    />
-    <link
-      rel="stylesheet"
-      href="styles/header.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles/journey-form.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+</head>
+
+<body>
     <div class="form-container">
-      <form
-        class="journey-form"
-        onsubmit="validateJourneyForm(event)"
-        novalidate
-      >
-        <div class="form-item">
-          <label
-            >Role
-            <input
-              type="text"
-              class="input-field role"
-              placeholder="Enter your role"
-              minlength="4"
-              name="role"
-              required
-            />
-          </label>
-          <span class="input-span role-input-span"></span>
-        </div>
-        <div class="form-item">
-          <label
-            >Period of Experience
-            <select
-              class="input-field period-of-experience"
-              name="period-of-experience"
-              required
-            >
-              <option value="">Select Period of Experience</option>
-              <option value="day-1">After a Day</option>
-              <option value="after-a-month">After a Month</option>
-              <option value="after-a-year">After a Year</option>
-            </select>
-          </label>
-          <span class="input-span period-of-experience-span"></span>
-        </div>
-        <div class="form-item">
-          <label
-            >Share Your Experience
-            <textarea
-              class="input-field share-your-experience"
-              placeholder="Enter your experience"
-              minlength="6"
-              name="experience"
-              required
-            ></textarea>
-          </label>
-          <span class="input-span share-your-experience-span"></span>
-        </div>
-        <div class="form-item">
-          <label
-            >Concepts You Prepared
-            <textarea
-              class="input-field concepts-you-prepared"
-              placeholder="What are the concepts you worked on ?"
-              minlength="6"
-              name="Concepts"
-              required
-            ></textarea>
-          </label>
-          <span class="input-span concepts-you-prepared-span"></span>
-        </div>
-        <div class="form-item">
-          <label
-            >Provide some Model Questiosn
-            <textarea
-              class="input-field provide-some-model-questions"
-              placeholder="Tell us some model questions"
-              minlength="6"
-              name="model-questions"
-              required
-            ></textarea>
-          </label>
-          <span class="input-span provide-some-model-questions-span"></span>
-        </div>
-        <div class="form-button">
-          <button type="submit" class="submit-button">Submit</button>
-        </div>
-      </form>
+        <form class="journey-form" onsubmit="validateJourneyForm(event)" novalidate>
+            <div class="form-item">
+                <label>Role
+                    <input type="text" class="input-field role" placeholder="Enter your role" minlength="4" name="role"
+                        required />
+                </label>
+                <span class="input-span role-input-span"></span>
+            </div>
+            <div class="form-item">
+                <label>Period of Experience
+                    <select class="input-field period-of-experience" name="period-of-experience" required>
+                        <option value="">Select Period of Experience</option>
+                        <option value="day-1">After a Day</option>
+                        <option value="after-a-month">After a Month</option>
+                        <option value="after-a-year">After a Year</option>
+                    </select>
+                </label>
+                <span class="input-span period-of-experience-span"></span>
+            </div>
+            <div class="form-item">
+                <label>Share Your Experience
+                    <textarea class="input-field share-your-experience" placeholder="Enter your experience"
+                        minlength="6" name="experience" required></textarea>
+                </label>
+                <span class="input-span share-your-experience-span"></span>
+            </div>
+            <div class="form-item">
+                <label>Concepts You Prepared
+                    <textarea class="input-field concepts-you-prepared"
+                        placeholder="What are the concepts you worked on ?" minlength="6" name="Concepts"
+                        required></textarea>
+                </label>
+                <span class="input-span concepts-you-prepared-span"></span>
+            </div>
+            <div class="form-item">
+                <label>Provide some Model Questiosn
+                    <textarea class="input-field provide-some-model-questions"
+                        placeholder="Tell us some model questions" minlength="6" name="model-questions"
+                        required></textarea>
+                </label>
+                <span class="input-span provide-some-model-questions-span"></span>
+            </div>
+            <div class="form-button">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
     </div>
     <script src="scripts/journey-form.js"></script>
-  </body>
+</body>
+
 </html>
