@@ -1,7 +1,7 @@
 const employeesReviews = [
     {
         name: "Deepika Padukone",
-        tagline: "Actor | Occasional Philosopher | Accidental LinkedIn Thought Leader",
+        tagline: "Actor | Accidental LinkedIn Thought Leader",
         role: "Junior Software Developer",
         dayOneExperience:
             "On my first day at ThoughtWorks, I learned how the team works together using Git and daily stand-up meetings. Everyone was friendly here.",
@@ -164,10 +164,6 @@ const employeesReviews = [
 ];
 
 const reviewsSection = document.querySelector('.reviews-section');
-const addJourneyBtn = document.querySelector('.add-journey-btn');
-
-const formOverlay = document.querySelector('.journey-form-overlay');
-const formContainer = document.querySelector('.form-container');
 
 function renderReviewCards() {
     let reviewsSectionHTML = '';
@@ -217,14 +213,4 @@ function renderReviewCards() {
 
 renderReviewCards();
 
-addJourneyBtn.addEventListener('click', () => {
-    formContainer.style.display = 'flex';
-    formOverlay.style.display = 'block';
-});
 
-formOverlay.addEventListener('click', hideJourneyForm);
-
-function hideJourneyForm() {
-    formContainer.style.display = 'none';
-    formOverlay.style.display = 'none';
-}

@@ -36,6 +36,27 @@ let journeyForm = document.querySelector(".journey-form");
 journeyForm.addEventListener("submit", validateJourneyForm);
 let journeyData = [];
 
+//btns
+const addJourneyBtn = document.querySelector('.add-journey-btn');
+
+const formOverlay = document.querySelector('.journey-form-overlay');
+const formContainer = document.querySelector('.form-container');
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('add-journey-btn')) {
+        formContainer.style.display = 'flex';
+        formOverlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+});
+
+formOverlay.addEventListener('click', hideJourneyForm);
+
+function hideJourneyForm() {
+    formContainer.style.display = 'none';
+    formOverlay.style.display = 'none';
+    document.body.style.overflow = 'unset';
+}
 function validateJourneyForm(event) {
     event.preventDefault();
 

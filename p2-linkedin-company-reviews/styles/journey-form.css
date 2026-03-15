@@ -8,6 +8,7 @@
 }
 
 .journey-form-overlay {
+    cursor: pointer;
     position: fixed;
     display: none;
     height: 100vh;

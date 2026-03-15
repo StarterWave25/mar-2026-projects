@@ -219,6 +219,7 @@
 
 .experience-cards {
     display: flex;
+    position: relative;
     gap: 1rem;
 }
 
@@ -256,4 +257,10 @@
 .experience-role-city {
     color: grey;
     font-weight: 400;
+}
+
+.add-journey-btn {
+    position: absolute;
+    right: 3%;
+    top: 0;
 }

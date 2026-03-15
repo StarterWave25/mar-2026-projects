@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/user-profile.css">
+    <link rel="stylesheet" href="styles/journey-form.css">
     <link rel="icon" type="image/svg+xml" href="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8">
 </head>
 
@@ -88,6 +89,7 @@
     </header>
 
     <main class="main-container">
+
         <div class="profile-section">
             <div class="banner-section">
                 <img src="img/banner.svg" alt="praveen-sir-banner">
@@ -132,6 +134,7 @@
                 </div>
             </div>
         </div>
+
         <div class="about-section" style="margin-top: 30px;">
             <h2>About</h2>
             <p>
@@ -142,6 +145,7 @@
             </p>
             <div class="edit-icon"><img src="img/edit-button.svg" alt="edit-icon"></div>
         </div>
+
         <div class="experience-section">
             <h2 class="experience-heading">Experience</h2>
             <div class="experience-cards">
@@ -163,7 +167,7 @@
                         a commitment to evolutionary architecture. By guiding students through the complexities of
                         full-stack development, I help them transition from writing code to building impactful products.
                     </p>
-                    <button class="buttons blue-btn">Add your Journey</button>
+                    <button class="buttons blue-btn add-journey-btn">Add your Journey</button>
                 </div>
             </div>
             <div class="experience-cards">
@@ -175,11 +179,64 @@
                     <h4 class="experience-role-type">Edupoly · Self-employed</h4>
                     <h4 class="experience-role-period">Jan 2021 - Present · 5 yrs</h4>
                     <h4 class="experience-role-city">Hyderabad, Telengana</h4>
+                    <button class="buttons blue-btn add-journey-btn">Add your Journey</button>
                 </div>
             </div>
         </div>
-    </main>
 
+        <div class="journey-form-overlay"></div>
+
+        <div class="form-container">
+            <form class="journey-form" novalidate>
+                <div class="form-item">
+                    <label>Role
+                        <input type="text" class="input-field role" placeholder="Enter your role" minlength="4"
+                            name="role" required />
+                    </label>
+                    <span class="input-span role-input-span"></span>
+                </div>
+                <div class="form-item">
+                    <label>Period of Experience
+                        <select class="input-field period-of-experience" name="period-of-experience" required>
+                            <option value="">Select Period of Experience</option>
+                            <option value="day-1">After a Day</option>
+                            <option value="after-a-month">After a Month</option>
+                            <option value="after-a-year">After a Year</option>
+                        </select>
+                    </label>
+                    <span class="input-span period-of-experience-span"></span>
+                </div>
+                <div class="form-item">
+                    <label>Share Your Experience
+                        <textarea class="input-field share-your-experience" placeholder="Enter your experience"
+                            minlength="6" name="experience" required></textarea>
+                    </label>
+                    <span class="input-span share-your-experience-span"></span>
+                </div>
+                <div class="form-item">
+                    <label>Concepts You Prepared
+                        <textarea class="input-field concepts-you-prepared"
+                            placeholder="What are the concepts you worked on ?" minlength="6" name="Concepts"
+                            required></textarea>
+                    </label>
+                    <span class="input-span concepts-you-prepared-span"></span>
+                </div>
+                <div class="form-item">
+                    <label>Provide some Model Questions
+                        <textarea class="input-field provide-some-model-questions"
+                            placeholder="Tell us some model questions" minlength="6" name="model-questions"
+                            required></textarea>
+                    </label>
+                    <span class="input-span provide-some-model-questions-span"></span>
+                </div>
+                <div class="form-button">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <script src="scripts/journey-form.js"></script>
 </body>
 
 </html>
