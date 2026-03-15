@@ -10,18 +10,30 @@ let submitButton = document.querySelector(".submit-button");
 
 //input field spans
 let roleError = document.querySelector(".role-input-span");
+roleError.classList = "role-error";
+
 let periodOfExperienceError = document.querySelector(
   ".period-of-experience-span",
 );
+periodOfExperienceError.classList = "period-of-experience-error";
+
 let shareYourExperienceError = document.querySelector(
   ".share-your-experience-span",
 );
+shareYourExperienceError.classList = "share-your-experience-error";
+
 let conceptsYouPreparedError = document.querySelector(
   ".concepts-you-prepared-span",
 );
+conceptsYouPreparedError.classList = "concepts-you-prepared-error";
+
 let modelQuestionsError = document.querySelector(
   ".provide-some-model-questions-span",
 );
+modelQuestionsError.classList = "model-questions-error";
+
+let journeyForm = document.querySelector(".journey-form");
+journeyForm.addEventListener("submit", validateJourneyForm);
 let journeyData = [];
 function validateJourneyForm(event) {
   event.preventDefault();
@@ -49,11 +61,7 @@ function validateJourneyForm(event) {
     };
     journeyData.push(formData);
     console.log(journeyData);
-    role.value = "";
-    periodOfExperience.value = "";
-    shareYourExperience.value = "";
-    conceptsYouPrepared.value = "";
-    modelQuestions.value = "";
+    document.querySelector(".journey-form").reset();
     displayPopup();
     return false;
   } else {
@@ -137,39 +145,25 @@ function validateModelQuestions() {
 
 function displayPopup() {
   let popupContainer = document.createElement("div");
+  popupContainer.classList = "successContainer";
+
   let icon = document.createElement("img");
-  icon.src = "p2-linkedin-company-reviews/img/formSuccess.png";
-  icon.style.width = "30px";
-  icon.style.height = "30px";
-  icon.style.objectFit = "cover";
-  let messsage = document.createElement("h3");
-  messsage.textContent = "Your Experience Submitted Successfully";
+  icon.classList = "successIcon";
+  icon.src = "./img/formSuccess.png";
+
+  let message = document.createElement("h3");
+  message.classList = "successMessage";
+  message.textContent = "Your Experience Submitted Successfully";
+
   let doneButton = document.createElement("button");
   doneButton.innerText = "Done";
+  doneButton.classList = "successButton";
   doneButton.addEventListener("click", function () {
     popupContainer.remove();
   });
-  doneButton.style.padding = "0.5em 1em";
-  doneButton.style.backgroundColor = "#0a66c2";
-  doneButton.style.borderRadius = "0.2em";
-  doneButton.style.border = "none";
-  doneButton.style.color = "#ffffffff";
+
   popupContainer.appendChild(icon);
-  popupContainer.appendChild(messsage);
+  popupContainer.appendChild(message);
   popupContainer.appendChild(doneButton);
-  popupContainer.style.backgroundColor = "rgba(228, 228, 228, 0.6)";
-  popupContainer.style.zIndex = "1000";
-  popupContainer.style.height = "250px";
-  popupContainer.style.width = "500px";
-  popupContainer.style.position = "fixed";
-  popupContainer.style.top = "50%";
-  popupContainer.style.left = "50%";
-  popupContainer.style.transform = "translate(-50%, -50%)";
-  popupContainer.style.borderRadius = "8px";
-  popupContainer.style.display = "flex";
-  popupContainer.style.flexDirection = "column";
-  popupContainer.style.gap = "15px";
-  popupContainer.style.alignItems = "center";
-  popupContainer.style.justifyContent = "center";
   document.body.appendChild(popupContainer);
 }

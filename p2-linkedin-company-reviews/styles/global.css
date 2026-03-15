@@ -1,43 +1,64 @@
 :root {
-  --white: white;
-  --grey: rgb(245, 245, 245);
-  --border-grey: rgb(220, 220, 220);
-  --blue: #0a66c2;
-  --black: black;
-  --border-radius: 8px;
-  --linkedIn-background: #ffffff;
-  --linkedIn-background2: #f5f7f9;
-  --linkedIn-background3: #f4f2ee;
+    --white: white;
+    --grey: rgb(245, 245, 245);
+    --border-grey: rgb(220, 220, 220);
+    --blue: #0a66c2;
+    --black: black;
+    --border-radius: 8px;
+    --linkedIn-background: #ffffff;
+    --linkedIn-background2: #f5f7f9;
+    --linkedIn-background3: #f4f2ee;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  position: relative;
-  background-color: var(--grey);
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+    position: relative;
+    background-color: var(--grey);
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
 }
 
 .buttons {
-  padding: 0.35rem 1rem;
-  border-radius: 32px;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+    border: 2px solid;
+    padding: 0.35rem 1rem;
+    border-radius: 32px;
+    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.blue-btn {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: transparent;
+}
+
+.blue-btn:hover {
+    background-color: #033f7b;
+}
+
+.light-blue-btn {
+    background-color: var(--white);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+.light-blue-btn:hover {
+    background-color: #7bb3eb55;
 }

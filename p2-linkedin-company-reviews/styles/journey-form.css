@@ -31,7 +31,7 @@
 
 .input-field {
   padding: 0.75rem 1rem;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--grey);
   outline: 3px solid transparent;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
@@ -49,6 +49,8 @@
 }
 
 .form-button {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }
 
@@ -57,10 +59,12 @@
   border-radius: 32px;
   font-size: 1rem;
   font-weight: 600;
-  color: black;
-  border: 1px solid var(--border-grey);
+
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  color: white;
+  background-color: var(--blue);
+  border: 2px solid transparent;
 }
 
 .submit-button:active,
@@ -68,4 +72,66 @@
   background-color: rgb(5, 80, 159);
   color: white;
   border: 2px solid var(--blue);
+}
+
+.successIcon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.successMessage {
+  color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 50px;
+}
+
+.successContainer {
+  background-color: rgba(228, 228, 228, 0.9);
+  z-index: 1000;
+  height: auto;
+  width: 90%;
+  max-width: 420px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+}
+.successButton {
+  padding: 0.35rem 1rem;
+  border-radius: 32px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: white;
+  background-color: var(--blue);
+  border: 2px solid transparent;
+}
+.successButton:hover,
+.successButton:active {
+  background-color: rgb(5, 80, 159);
+  color: white;
+  border: 2px solid var(--blue);
+}
+
+.role-error,
+.period-of-experience-error,
+.share-your-experience-error,
+.concepts-you-prepared-error,
+.model-questions-error {
+  color: red;
+  font-size: small;
 }
