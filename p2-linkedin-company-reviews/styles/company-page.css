@@ -36,39 +36,6 @@ body {
 .banner-section img {
   width: 100%;
   height: 100%;
-
-  padding: clamp(1rem, 2vw, 3rem) clamp(1rem, 5vw, 4rem);
-  display: flex;
-  width: 100%;
-  min-height: 120vh;
-  gap: 2em;
-}
-
-.company-details {
-  flex: 3 1 0;
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.company-profile {
-  height: 65%;
-  background-color: var(--linkedIn-background);
-  border: 1px solid var(--border-grey);
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-}
-
-.banner-section {
-  flex: 1 1 0;
-  object-fit: cover;
-  position: relative;
-}
-
-.banner-section img {
-  width: 100%;
 }
 
 .profile-section {
@@ -104,9 +71,6 @@ body {
   padding: clamp(1rem, .9vw, 3rem) clamp(1rem, 1.5vw, 4rem);
   flex: 2 1 0;
   margin-top: 6%;
-  padding: clamp(1rem, .9vw, 3rem) clamp(1rem, 1.5vw, 4rem);
-  flex: 2 1 0;
-  margin-top: 10%;
 }
 
 .details-section h3 {
@@ -145,9 +109,6 @@ body {
   gap: 1.5em;
   display: flex;
   flex: 1 1 0;
-  margin-top: 2em;
-  gap: 1.5em;
-  display: flex;
 }
 
 .life-button,
@@ -156,10 +117,6 @@ body {
   color: var(--blue);
   border: 1.5px solid var(--blue);
   font-size: clamp(.5rem, 1.8vw, 1rem) !important;
-  background-color: white;
-  color: var(--blue);
-  border: 1.5px solid var(--blue);
-
 }
 
 .life-button {
@@ -200,27 +157,6 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-  flex: .7 1 0;
-  border-top: 1.3px solid rgba(128, 128, 128, 0.283);
-}
-
-.navigation-section ul {
-  width: 60%;
-  display: flex;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.navigation-section ul li {
-  list-style: none;
-  font-size: clamp(.9rem, 1.3vw, 1.2rem);
-  font-weight: 500;
-  color: rgb(109, 107, 107);
-  height: 100%;
-  display: flex;
-  align-items: center;
-
 }
 
 .navigation-section ul li:nth-child(1) {
@@ -252,15 +188,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
   padding: clamp(1rem, 1vw, 3rem) clamp(1rem, 3vw, 4rem);
-  height: 32%;
-  background-color: var(--linkedIn-background);
-  border: 1px solid var(--border-grey);
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: clamp(1rem, 1vw, 3rem) clamp(1rem, 3vw, 4rem);
-
 }
 
 .overview-container h2 {
@@ -272,10 +199,6 @@ body {
   overflow: hidden;
   height: 55%;
   margin: clamp(1rem, 1vw, 1.2rem) 0;
-  font-size: clamp(.9rem, 2vw, 1.25rem);
-  overflow: hidden;
-  height: 55%;
-
 }
 
 .overview-container .description span {
@@ -367,28 +290,4 @@ body {
     width: 20px;
     padding-top: 10px;
   }
-}
-
-.promotions-details {
-  flex: 1 1 0;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.promos-container {
-  background-color: var(--linkedIn-background2);
-  width: 100%;
-  height: 32%;
-  border: 1px solid var(--border-grey);
-  border-radius: var(--border-radius);
-}
-
-@media (width <=700px) {
-  .main-container {
-    flex-direction: column;
-  }
-
-
 }
