@@ -162,3 +162,48 @@ const employeesReviews = [
         ]
     }
 ];
+
+const reviewsSection = document.querySelector('.reviews-section');
+let reviewsSectionHTML = '';
+
+employeesReviews.forEach(review => {
+    reviewsSectionHTML += `
+    <div class="review-card">
+        <div class="review-author-details">
+            <div class="author-image-overlay">
+                <img src="img/author-icon.png" alt="author-image" class="author-image">
+            </div>
+            <div class="author-details">
+                <h3 class="author-name">${review.name}</h3>
+                <p class="author-tagline">${review.tagline}</p>
+            </div>
+        </div>
+        <div class="review-details">
+            <div class="review-author-role review-details-item review-border-item">
+                <h3 class="review-labels">Role</h3>
+                <p class="review-values">${review.role}</p>
+            </div>
+            <ul class="experiences-list">
+                <li class="review-details-item experience-list-item day-1">
+                    <h3 class="review-labels">Day 1 Experience</h3>
+                    <p class="review-values">${review.dayOneExperience}</p>
+                </li>
+                <li class="review-details-item experience-list-item month-1">
+                    <h3 class="review-labels">1st Month Experience</h3>
+                    <p class="review-values">${review.monthOneExperience}</p>
+                </li>
+                <li class="review-details-item experience-list-item year-1">
+                    <h3 class="review-labels">1st Year Experience</h3>
+                    <p class="review-values">${review.yearOneExperience}</p>
+                </li>
+            </ul>
+            <div class="author-concepts review-details-item">
+                <h3 class="review-labels">Concepts I Prepared</h3>
+                <p class="review-values">${review.conceptsYouPrepared}</p>
+            </div>
+        </div>
+    </div>
+    `;
+});
+
+reviewsSection.innerHTML = reviewsSectionHTML;
