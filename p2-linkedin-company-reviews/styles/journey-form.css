@@ -1,130 +1,151 @@
 .form-container {
-  display: flex;
-  justify-content: center;
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.journey-form-overlay {
+    position: fixed;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(60, 60, 60, 0.534);
+    backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
 }
 
 .journey-form {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem 1.5rem;
-  gap: 0.5rem;
-  width: clamp(30rem, 45vw, 50rem);
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem 1.5rem;
+    gap: 0.5rem;
+    width: clamp(30rem, 45vw, 50rem);
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid var(--border-grey);
 }
 
-.journey-form > * {
-  width: 100%;
+.journey-form>* {
+    width: 100%;
 }
 
 .form-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .form-item label {
-  color: var(--blue);
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+    color: var(--blue);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
 }
 
 .input-field {
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--grey);
-  outline: 3px solid transparent;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--grey);
+    outline: 3px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
 }
 
 .input-field:focus {
-  border: 1px solid var(--blue);
-  outline: 3px solid rgb(0, 83, 93, 0.2);
+    border: 1px solid var(--blue);
+    outline: 3px solid rgb(0, 83, 93, 0.2);
 }
 
 .input-span {
-  color: var(--error-red);
-  font-size: 0.8rem;
+    color: var(--error-red);
+    font-size: 0.8rem;
 }
 
 .form-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .submit-button {
-  padding: 0.35rem 1rem;
-  border-radius: 32px;
-  font-size: 1rem;
-  font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 32px;
+    font-size: 1rem;
+    font-weight: 600;
 
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  color: white;
-  background-color: var(--blue);
-  border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: white;
+    background-color: var(--blue);
+    border: 2px solid transparent;
 }
 
 .submit-button:active,
 .submit-button:hover {
-  background-color: rgb(5, 80, 159);
-  color: white;
-  border: 2px solid var(--blue);
+    background-color: rgb(5, 80, 159);
+    color: white;
+    border: 2px solid var(--blue);
 }
 
 .successIcon {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
+
 .successMessage {
-  color: var(--blue);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-left: 50px;
+    color: var(--blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 50px;
 }
 
 .successContainer {
-  background-color: rgba(228, 228, 228, 0.9);
-  z-index: 1000;
-  height: auto;
-  width: 90%;
-  max-width: 420px;
+    background-color: rgba(228, 228, 228, 0.9);
+    z-index: 1000;
+    height: auto;
+    width: 90%;
+    max-width: 420px;
 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  border-radius: 8px;
+    border-radius: 8px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 
-  padding: 2rem;
+    padding: 2rem;
 }
+
 .successButton {
-  padding: 0.35rem 1rem;
-  border-radius: 32px;
-  font-size: 1rem;
-  font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 32px;
+    font-size: 1rem;
+    font-weight: 600;
 
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  color: white;
-  background-color: var(--blue);
-  border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: white;
+    background-color: var(--blue);
+    border: 2px solid transparent;
 }
+
 .successButton:hover,
 .successButton:active {
-  background-color: rgb(5, 80, 159);
-  color: white;
-  border: 2px solid var(--blue);
+    background-color: rgb(5, 80, 159);
+    color: white;
+    border: 2px solid var(--blue);
 }
 
 .role-error,
@@ -132,6 +153,6 @@
 .share-your-experience-error,
 .concepts-you-prepared-error,
 .model-questions-error {
-  color: red;
-  font-size: small;
+    color: red;
+    font-size: small;
 }

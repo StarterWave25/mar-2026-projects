@@ -4,11 +4,11 @@ const employeesReviews = [
         tagline: "Actor | Occasional Philosopher | Accidental LinkedIn Thought Leader",
         role: "Junior Software Developer",
         dayOneExperience:
-            "On my first day at ThoughtWorks, I learned how the team works together using Git and daily stand-up meetings. Everyone was friendly and helped me set up my laptop and project.",
+            "On my first day at ThoughtWorks, I learned how the team works together using Git and daily stand-up meetings. Everyone was friendly here.",
         monthOneExperience:
-            "After one month, I understood how to read project requirements and write small features. I also learned how code reviews help improve code quality.",
+            "After one month, I understood how to read project requirements and write small features.",
         yearOneExperience:
-            "After a year, I became comfortable working on bigger features and helping new team members. I also learned how to think about clean code and good design.",
+            "I became comfortable working on bigger features and helping new team members. I also learned how to think about clean code and good design.",
         conceptsYouPrepared: [
             "Git basics",
             "JavaScript fundamentals",
@@ -24,7 +24,7 @@ const employeesReviews = [
         dayOneExperience:
             "My first day was about understanding the project structure and backend services. The team showed me how APIs connect the frontend and backend.",
         monthOneExperience:
-            "After one month, I started writing simple APIs and fixing small bugs. I also learned how databases store and retrieve information.",
+            "After one month, I started writing simple APIs and fixing small bugs. I also learned how databases store",
         yearOneExperience:
             "After a year, I could design backend features and improve performance. I also helped teammates understand how our APIs work.",
         conceptsYouPrepared: [
@@ -164,46 +164,67 @@ const employeesReviews = [
 ];
 
 const reviewsSection = document.querySelector('.reviews-section');
-let reviewsSectionHTML = '';
+const addJourneyBtn = document.querySelector('.add-journey-btn');
 
-employeesReviews.forEach(review => {
-    reviewsSectionHTML += `
+const formOverlay = document.querySelector('.journey-form-overlay');
+const formContainer = document.querySelector('.form-container');
+
+function renderReviewCards() {
+    let reviewsSectionHTML = '';
+
+    employeesReviews.forEach(review => {
+        reviewsSectionHTML += `
     <div class="review-card">
         <div class="review-author-details">
             <div class="author-image-overlay">
                 <img src="img/author-icon.png" alt="author-image" class="author-image">
             </div>
             <div class="author-details">
-                <h3 class="author-name">${review.name}</h3>
-                <p class="author-tagline">${review.tagline}</p>
+                <h3 class="author-name">${review.name || 'Praveen Gubbala'}</h3>
+                <p class="author-tagline">${review.tagline || 'Fullstack Consultant Trainer'}</p>
             </div>
         </div>
         <div class="review-details">
             <div class="review-author-role review-details-item review-border-item">
                 <h3 class="review-labels">Role</h3>
-                <p class="review-values">${review.role}</p>
+                <p class="review-values">${review.role || 'Training Consultant'}</p>
             </div>
             <ul class="experiences-list">
                 <li class="review-details-item experience-list-item day-1">
                     <h3 class="review-labels">Day 1 Experience</h3>
-                    <p class="review-values">${review.dayOneExperience}</p>
+                    <p class="review-values">${review?.dayOneExperience}</p>
                 </li>
                 <li class="review-details-item experience-list-item month-1">
                     <h3 class="review-labels">1st Month Experience</h3>
-                    <p class="review-values">${review.monthOneExperience}</p>
+                    <p class="review-values">${review.monthOneExperience || 'Not Submitted'}</p>
                 </li>
                 <li class="review-details-item experience-list-item year-1">
                     <h3 class="review-labels">1st Year Experience</h3>
-                    <p class="review-values">${review.yearOneExperience}</p>
+                    <p class="review-values">${review.yearOneExperience || 'Not Submitted'}</p>
                 </li>
             </ul>
             <div class="author-concepts review-details-item">
                 <h3 class="review-labels">Concepts I Prepared</h3>
-                <p class="review-values">${review.conceptsYouPrepared}</p>
+                <p class="review-values">${review?.conceptsYouPrepared}</p>
             </div>
         </div>
     </div>
     `;
+    });
+
+    reviewsSection.innerHTML = reviewsSectionHTML;
+}
+
+renderReviewCards();
+
+addJourneyBtn.addEventListener('click', () => {
+    formContainer.style.display = 'flex';
+    formOverlay.style.display = 'block';
 });
 
-reviewsSection.innerHTML = reviewsSectionHTML;
+formOverlay.addEventListener('click', hideJourneyForm);
+
+function hideJourneyForm() {
+    formContainer.style.display = 'none';
+    formOverlay.style.display = 'none';
+}
