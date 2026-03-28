@@ -1,0 +1,80 @@
+I.DEFINING THE PROXY:- what is proxy, what it does, purpose, in simple terms::-
+
+    1.  The Proxy object allows you to create an object that can be used in place of the original object, but which may redefine fundamental Object operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on, Proxy is an object that wraps another object and controls how it is accessed or modified.
+
+    2.  Simply proxy acts as a middleman between your object and code you write to access it, i.e., it gives more control on what you do with the object.
+
+    3.  You interact with proxy instead of interacting with the object directly, then you can do things like:- a.watch what actions you do, b.modify the actions, c.block the actions, d.log the actions. This gives more control on the object you are accessing with the proxy.
+
+    4.  Purpose ( why Proxy? ):- Debugging (log access), Validation (check values), Security (restrict access), Formatting data, Building frameworks (React, Vue internally use similar ideas)
+
+    5.  Proxy object in a nutshell:- Proxy creates a controlled interface that can extend, modify, or restrict normal js object behavior.
+
+II.IMPORTANT TERMS USED IN PROXY:-
+
+    1.  Proxy:- The wrapper object that controls access to another object.
+
+    2.  Target:- The original object which is being wrapped. ( This is real data, proxy sits in front of this. ).
+
+    3.  Handler:- An object which defines how the operations should behave. Controls what happens when you interact with proxy.
+
+    4.  Trap:- The function inside the handler which intercepts a specific operation.
+
+        Commonly used traps:= 
+        a.  get: Runs when you get a property from object using proxy object.
+        b.  set: Runs when you set a property value to the object using proxy object.
+        c.  deleteProperty: Runs when you delete a property of the object.
+
+    5.  Property (prop):- The key you are accessing in the object. eg:= proxy.name
+
+    6.  Interception:- Proxy intercepts (catches) the operations before they reach the target.
+        flow in interception: request → proxy → handler(trap) ( Here the trap intercepts the operation ) → target.
+
+    7. Invariant:- Rules enforced by JavaScript that Proxy handlers must not violate, ensuring consistency with the target object’s actual structure.
+
+    8.  Reflect:- Built-in object that provides functions for all fundamental object operations in a consistent and safe way.
+
+    9.  Receiver:- It is the object that originally initiated the operation that is to be performed.
+
+III.CREATION OF PROXY:-
+
+    1.  Proxy for an object in js is created with 'Proxy' constructor function and it takes two parameters:- 
+        i.target: the original object which you want to proxy.
+        ii.handler: an object that defines which operations will be intercepted and how to redefine intercepted operations.
+    2.  Steps to Create a Proxy:=
+            a.  Create target object.
+            b.  Create handler object (with traps).
+            c.  Create proxy using new Proxy(target, handler).
+            d.  Use proxy instead of target.
+            e.  Customize traps as needed.
+        Steps ::= In one line:- Create target → define handler → wrap with Proxy → use proxy
+    
+IV.IMPORTANT POINTS TO REMEMBER:-
+
+    1.  Exotic objects are objects whose behavior can be customized beyond normal javascript object rules.
+
+    2.  Proxies let devs create exotic objects by giving functionality for intercepting and redefining fundamental operations on normal javascript objects, effectively changning how the object behaves.
+
+    3.  Invariant violations occur when a Proxy handler returns results inconsistent with the target’s actual property descriptors or extensibility rules, causing JavaScript to throw a TypeError.
+
+    4.  Reflect gives function based versions of JS's internal object methods to the proxy and is mainly used to preserve default behavior in proxy. Mainly used for consistent return values from proxy, it preserves default behavior of the object.
+
+    5.  Reflect in a nutshell:- Reflect provides a standardized way to perform object operations and is mainly used with Proxy to forward operations while preserving JavaScript’s default behavior.
+
+    6.  Receiver controls what 'this' refers to inside the getter/setter inside the proxy. In simple terms, receiver is the original object that started the property access. It mainly kicks in while usage of JS inheritance with proxies.
+
+    7.  Receiver in a nutshell:- Receiver is the object that initiated the operation and becomes this inside getters/setters.
+
+V.USE CASES OF PROXY OBJECT:-
+
+    1.  No-op Forwarding:- Proxy does nothing, it just forwards everything to the original object.
+
+    2.  Validation:- Checking the values that are set to the properties before actually setting them. (controlled objects).
+
+    3.  Manipulating DOM:- Use proxy to simplify interactions with dom elements. Eg:- Automatic UI updating ( Vue.js' reactive(), ref(), dependency tracking are build on this concept. ).
+
+    4.  Value correction:- Automatically fix or adjust values before storing them in the object. Used mainly in formatting inputs and preventing invalid range of values.
+
+    5.  Extra property:- Add and access the properties that don't actually exist in the target object. This is a combination of validation ( to identify the property that is being accessed ) and logic to compute values that are intended to return for that porperty.
+
+    6.  Usecases in simple words:= Allow (forward), Block (validation), Fix (correction), Extend (extra property), Connect (DOM).
