@@ -1,4 +1,4 @@
-I.DEFINING THE PROXY:- what is proxy, what it does, purpose, in simple terms::-
+I.DEFINING PROXY:- what is proxy, what it does, purpose, in simple terms::-
 
     1.  The Proxy object allows you to create an object that can be used in place of the original object, but which may redefine fundamental Object operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on, Proxy is an object that wraps another object and controls how it is accessed or modified.
 
