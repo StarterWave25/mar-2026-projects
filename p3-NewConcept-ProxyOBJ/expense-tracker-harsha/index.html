@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactive Expenses System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 230, 220);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .expenses-system-heading {
+            color: rgb(150, 50, 0);
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        .expenses-fields-container {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .expenses-field {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .expenses-input {
+            outline: 2px solid transparent;
+            border: none;
+            padding: 0.75rem 2rem 0.75rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .expenses-input:focus {
+            outline: 2px solid rgb(150, 50, 0);
+        }
+
+        .expenses-add-btn {
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            background-color: rgb(150, 50, 0);
+            color: white;
+            border: none;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .expenses-add-btn:hover {
+            background-color: rgb(100, 34, 0);
+        }
+
+        .expense-logs-container {
+            padding: 0 2rem 2rem 2rem;
+            display: flex;
+            flex-flow: column wrap;
+            gap: 1rem;
+        }
+
+        .logs-warnings {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .expenses-total {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="expenses-system-heading">Reactive Expenses System</h1>
+    <div class="expenses-fields-container">
+        <div class="expenses-field">
+            <input type="text" class="expenses-input" placeholder="Food (Limit: ₹500)">
+            <button class="expenses-add-btn food-expense-btn" data-prop="food">Add</button>
+        </div>
+        <div class="expenses-field">
+            <input type="text" class="expenses-input" placeholder="Travel (Limit: ₹300)">
+            <button class="expenses-add-btn travel-expense-btn" data-prop="travel">Add</button>
+        </div>
+        <div class="expenses-field">
+            <input type="text" class="expenses-input" placeholder="Shopping (Limit: ₹700)">
+            <button class="expenses-add-btn shopping-expense-btn" data-prop="shopping">Add</button>
+        </div>
+    </div>
+    <div class="expense-logs-container">
+        <h2 class="logs-warnings"></h2>
+        <h2 class="expenses-total">Total: ₹0</h2>
+    </div>
+    <script>
+        // State
+        let expensesState = {
+            food: 0,
+            travel: 0,
+            shopping: 0
+        };
+
+        let expensesTotal = 0;
+
+        const expensesLimits = {
+            food: 500,
+            travel: 300,
+            shopping: 700
+        };
+
+        // DOM Elements
+        const expensesFieldsContainer = document.querySelector('.expenses-fields-container');
+        const expensesLogs = document.querySelector('.logs-warnings');
+        const expensesTotalHeading = document.querySelector('.expenses-total');
+
+        expensesFieldsContainer.addEventListener('click', handleAddExpenseBtn);
+
+        let expensesHandler = {
+            set: setExpensesFn
+        }
+
+        expensesState = new Proxy(expensesState, expensesHandler);
+
+        function handleAddExpenseBtn(e) {
+            if (!(e.target.classList.contains('expenses-add-btn'))) {
+                return;
+            }
+
+            const expensesField = e.target.closest('.expenses-field');
+            const expenseInput = expensesField.querySelector('.expenses-input');
+            const expenseProp = e.target.dataset.prop;
+
+            expensesState[expenseProp] = Number(expenseInput.value);
+
+            expenseInput.value = '';
+        }
+
+        //Action
+        function setExpensesFn(expensesState, prop, value) {
+            let newExpense = expensesState[prop] + value;
+
+            if (isNaN(value) || value <= 0) {
+                expensesLogs.textContent = `Invalid Expense Entered for ${prop}`;
+            }
+
+            else if (newExpense <= expensesLimits[prop]) {
+                expensesLogs.textContent = `${prop} expense is updated from ₹${expensesState[prop]} to ₹${newExpense}`;
+                expensesState[prop] += value;
+                expensesTotal += value;
+                expensesTotalHeading.textContent = `Total: ₹${expensesTotal}`;
+            }
+
+            else {
+                expensesLogs.textContent = `Expense Limit for ${prop} is Exceeded`;
+            }
+
+            let timeoutId = setTimeout(() => {
+                expensesLogs.innerHTML = '';
+                clearTimeout(timeoutId);
+            }, 3000);
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
