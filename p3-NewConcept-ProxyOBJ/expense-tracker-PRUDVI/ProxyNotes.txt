@@ -1,0 +1,61 @@
+What is an Object & Why use it.
+
+A JavaScript object is a container that groups related data using labels.
+
+Objects keep your code organized. Instead of having multiple separate variables, you have one single object that holds everything related to that entity.
+
+At lowest level, things we do with object:
+1. Get a Property
+2. Set a Property
+3. Check existence
+4. Delete
+5. Call function
+
+These are called internal operations...
+
+Now, proxy...
+It allows us to intercept and redefine fundamental operations
+means 
+proxy is a additional layer for the objects which adds additional functionality to object
+
+Standard Object: You ask for data → The object gives it to you.
+With Proxy: You ask for data → The Proxy intercepts → The Proxy runs your custom logic → The Proxy gives you the result.
+
+So it is like,
+target = real object
+proxy = security guard
+handler = rulebook
+
+const user = {
+  name: "Prudvi",
+  age: 18
+};
+
+const handler = {
+  get(target, prop, receiver) {
+    console.log(`Getting ${prop}`);
+
+    if (!(prop in target)) {
+      return "Property not found";
+    }
+
+    return Reflect.get(target, prop, receiver);
+  },
+
+  set(target, prop, value, receiver) {
+    console.log(`Setting ${prop} to ${value}`);
+
+    if (prop === "age" && value < 0) {
+      throw new Error("Age cannot be negative");
+    }
+
+    return Reflect.set(target, prop, value, receiver);
+  }
+};
+
+const proxy = new Proxy(user, handler);
+
+// Usage
+console.log(proxy.name);   // logs + returns value
+proxy.age = 20;            // logs + updates
+proxy.age = -5;            // ❌ error

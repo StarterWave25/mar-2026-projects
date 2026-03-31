@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Expense Tracker</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --accent: #0044ff;
+      --dark: #000000;
+      --border: 2px solid #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2.heading {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      border-left: 8px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    .expenses-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .expense-container {
+      border: var(--border);
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .expense-info h3 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .expense-value-display {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .expense-controls {
+      display: flex;
+      gap: 0.5rem;
+      grid-column: 1 / -1;
+    }
+
+    input {
+      flex: 1;
+      border: var(--border);
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-weight: 600;
+      outline: none;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: var(--border);
+      padding: 0.8rem 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+
+    button:hover {
+      background: var(--dark);
+    }
+
+    button:active {
+      transform: translateY(2px);
+    }
+
+    .messages {
+      margin-top: 2rem;
+      min-height: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .log-message {
+      color: var(--accent);
+    }
+
+    .error-message {
+      color: #ff0000;
+    }
+
+    @media (max-width: 480px) {
+      .expense-controls {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2 class="heading">Expense Tracker <span style="color: var(--accent)">Reactive Proxy</span></h2>
+    
+    <div class="expenses-container">
+      <div class="expense-container">
+        <div class="expense-info">
+          <h3>Food</h3>
+          <div class="expense-value-display">₹<span class="food-expense">0</span></div>
+        </div>
+        <div class="expense-controls">
+          <input class="food-expense-input" type="text" placeholder="Enter Amount">
+          <button class="food-expense-add">Update</button>
+        </div>
+      </div>
+
+      <div class="expense-container">
+        <div class="expense-info">
+          <h3>Travel</h3>
+          <div class="expense-value-display">₹<span class="travel-expense">0</span></div>
+        </div>
+        <div class="expense-controls">
+          <input class="travel-expense-input" type="text" placeholder="Enter Amount">
+          <button class="travel-expense-add">Update</button>
+        </div>
+      </div>
+
+      <div class="expense-container">
+        <div class="expense-info">
+          <h3>Shopping</h3>
+          <div class="expense-value-display">₹<span class="shop-expense">0</span></div>
+        </div>
+        <div class="expense-controls">
+          <input class="shop-expense-input" type="text" placeholder="Enter Amount">
+          <button class="shop-expense-add">Update</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="messages">
+      <p class="log-message"></p>
+      <p class="error-message"></p>
+    </div>
+  </main>
+
+  <script>
+    const logMessage = document.querySelector('.log-message');
+    const errorMessage = document.querySelector('.error-message');
+
+    const foodExpense = document.querySelector('.food-expense');
+    const travelExpense = document.querySelector('.travel-expense');
+    const shopExpense = document.querySelector('.shop-expense');
+
+    const foodExpenseAdd = document.querySelector('.food-expense-add');
+    const travelExpenseAdd = document.querySelector('.travel-expense-add');
+    const shopExpenseAdd = document.querySelector('.shop-expense-add');
+
+    const foodExpenseInput = document.querySelector('.food-expense-input');
+    const travelExpenseInput = document.querySelector('.travel-expense-input');
+    const shopExpenseInput = document.querySelector('.shop-expense-input');
+
+    const expenses = {
+      food: 0,
+      travel: 0,
+      shopping: 0
+    }
+
+    const handler = {
+      get(target, prop, receiver) {
+        if (!(prop in target)) {
+          showError(`Field ${prop} missing`);
+          return;
+        }
+        return Reflect.get(target, prop, receiver);
+      },
+
+      set(target, prop, value, receiver) {
+        if (isNaN(value)) {
+          showError("Input must be a number");
+          return false;
+        }
+        if (value < 0) {
+          showError("Negative values not allowed");
+          return false;
+        }
+
+        logMessage.textContent = `Updated ${prop}: ₹${value}`;
+        setTimeout(() => logMessage.textContent = '', 3000);
+
+        return Reflect.set(target, prop, value, receiver);
+      }
+    }
+
+    function showError(msg) {
+      errorMessage.textContent = msg;
+      setTimeout(() => errorMessage.textContent = '', 3000);
+    }
+
+    const proxy = new Proxy(expenses, handler);
+
+    foodExpenseAdd.addEventListener('click', () => {
+      const val = Number(foodExpenseInput.value);
+      if (proxy.food = val) {
+         foodExpense.textContent = proxy.food;
+         foodExpenseInput.value = '';
+      }
+    });
+
+    travelExpenseAdd.addEventListener('click', () => {
+      const val = Number(travelExpenseInput.value);
+      if (proxy.travel = val) {
+        travelExpense.textContent = proxy.travel;
+        travelExpenseInput.value = '';
+      }
+    });
+
+    shopExpenseAdd.addEventListener('click', () => {
+      const val = Number(shopExpenseInput.value);
+      if (proxy.shopping = val) {
+        shopExpense.textContent = proxy.shopping;
+        shopExpenseInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
