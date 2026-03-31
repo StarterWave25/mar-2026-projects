@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactive Expenses System</title>
+    <link rel="stylesheet" href="expenses-system.css">
+</head>
+
+<body>
+    <h1 class="expenses-system-heading">Reactive Expenses System</h1>
+    <div class="expenses-fields-container">
+        <div class="expenses-field">
+            <input type="text" class="expenses-input" placeholder="Food (Limit: ₹500)">
+            <button class="expenses-add-btn food-expense-btn" data-prop="food">Add</button>
+        </div>
+        <div class="expenses-field">
+            <input type="text" class="expenses-input" placeholder="Travel (Limit: ₹300)">
+            <button class="expenses-add-btn travel-expense-btn" data-prop="travel">Add</button>
+        </div>
+        <div class="expenses-field">
+            <input type="text" class="expenses-input" placeholder="Shopping (Limit: ₹700)">
+            <button class="expenses-add-btn shopping-expense-btn" data-prop="shopping">Add</button>
+        </div>
+    </div>
+    <div class="expense-logs-container">
+        <h2 class="logs-warnings"></h2>
+        <h2 class="expenses-total">Total: ₹0</h2>
+    </div>
+    <script src="expenses-system.js"></script>
+</body>
+
+</html>
