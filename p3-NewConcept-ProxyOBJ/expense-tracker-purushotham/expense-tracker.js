@@ -3,16 +3,29 @@ const expenses = {
     travel: 0,
     shopping: 0,
 };
+const limits = {
+    food: 500,
+    travel: 300,
+    shopping: 700,
+};
 const expensesProxy = new Proxy(expenses, {
     set(target, prop, value) {
         if (!Number(value) || value < 0) {
             throw Error("Invalid Expenses for " + prop);
+        } else if (target[prop] + value > limits[prop]) {
+            throw Error(`Budget Limit for ${prop} is exceeding!`);
         } else {
             target[prop] += value;
             render();
         }
     },
     get(target, prop) {
+        if (prop === "total") {
+            return Object.keys(target).reduce(
+                (total, expense) => (total += target[expense]),
+                0,
+            );
+        }
         return target[prop];
     },
 });
@@ -55,18 +68,20 @@ function displayLogs(msg) {
     }, 3000);
 }
 
+function addEventHandler(e, typeOfExpense) {
+    addExpense(typeOfExpense, e.target.previousElementSibling.value);
+    e.target.previousElementSibling.value = "";
+}
+
 function addEventHandlers() {
     document.getElementById("food-add").addEventListener("click", (e) => {
-        addExpense("food", e.target.previousElementSibling.value);
-        e.target.previousElementSibling.value = "";
+        addEventHandler(e, "food");
     });
     document.getElementById("travel-add").addEventListener("click", (e) => {
-        addExpense("travel", e.target.previousElementSibling.value);
-        e.target.previousElementSibling.value = "";
+        addEventHandler(e, "travel");
     });
     document.getElementById("shopping-add").addEventListener("click", (e) => {
-        addExpense("shopping", e.target.previousElementSibling.value);
-        e.target.previousElementSibling.value = "";
+        addEventHandler(e, "shopping");
     });
     render();
 }
@@ -89,6 +104,10 @@ function render() {
             <tr>
                 <td>Shopping</td>
                 <td>${expensesProxy.shopping}</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td class="font-weight-bold">${expensesProxy.total}</td>
             </tr>
         </table>
     `;
